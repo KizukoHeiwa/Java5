@@ -9,7 +9,7 @@ public class DemoController {
     @RequestMapping("/poly/hello")
     public String sayHello(Model model) {
         model.addAttribute("title", "FPT Polytechnic");
-        model.addAttribute("subject", "SpringBoot MVC");
+        model.addAttribute("subject", "SpringBoot MVC 0945.158.491");
         return "/demo/demo.html";
     }
 }
