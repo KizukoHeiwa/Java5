@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>FPT Polytechnic</title>
+</head>
+<body>
+    <form method="post">`
+        <label for="chieuDai">Chiều dài</label>
+        <input type="number" name="chieuDai" id="chieuDai" th:value="${param.chieuDai}"><br>
+        <label for="chieuRong">Chiều rộng</label>
+        <input type="number" name="chieuRong" id="chieuRong" th:value="${param.chieuRong}"><br>
+        <button type="submit" formaction="/calculate/result">Tính toán</button>
+    </form>
+    <h1>Chu vi là: <span th:text="${chuVi}"></span></h1>
+    <h1>Diện tích là: <span th:text="${dienTich}"></span></h1>
+</body>
+</html>
