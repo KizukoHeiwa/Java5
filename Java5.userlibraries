@@ -210,23 +210,23 @@
   <library name="Maven: org.springframework.boot:spring-boot-starter:3.4.1">
     <archive path="C:/Users/Admin/.m2/repository/org/springframework/boot/spring-boot-starter/3.4.1/spring-boot-starter-3.4.1.jar" />
   </library>
-  <library name="Maven: io.micrometer:micrometer-core:1.14.2">
-    <archive path="C:/Users/Admin/.m2/repository/io/micrometer/micrometer-core/1.14.2/micrometer-core-1.14.2.jar" />
-  </library>
-  <library name="Maven: org.latencyutils:LatencyUtils:2.0.3">
-    <archive path="C:/Users/Admin/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar" />
-  </library>
-  <library name="Maven: org.springframework.boot:spring-boot-starter-actuator:3.4.1">
-    <archive path="C:/Users/Admin/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.4.1/spring-boot-starter-actuator-3.4.1.jar" />
+  <library name="Maven: io.micrometer:micrometer-jakarta9:1.14.2">
+    <archive path="C:/Users/Admin/.m2/repository/io/micrometer/micrometer-jakarta9/1.14.2/micrometer-jakarta9-1.14.2.jar" />
   </library>
   <library name="Maven: org.springframework.boot:spring-boot-actuator:3.4.1">
     <archive path="C:/Users/Admin/.m2/repository/org/springframework/boot/spring-boot-actuator/3.4.1/spring-boot-actuator-3.4.1.jar" />
   </library>
-  <library name="Maven: io.micrometer:micrometer-jakarta9:1.14.2">
-    <archive path="C:/Users/Admin/.m2/repository/io/micrometer/micrometer-jakarta9/1.14.2/micrometer-jakarta9-1.14.2.jar" />
+  <library name="Maven: org.springframework.boot:spring-boot-starter-actuator:3.4.1">
+    <archive path="C:/Users/Admin/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.4.1/spring-boot-starter-actuator-3.4.1.jar" />
+  </library>
+  <library name="Maven: org.latencyutils:LatencyUtils:2.0.3">
+    <archive path="C:/Users/Admin/.m2/repository/org/latencyutils/LatencyUtils/2.0.3/LatencyUtils-2.0.3.jar" />
   </library>
   <library name="Maven: org.hdrhistogram:HdrHistogram:2.2.2">
     <archive path="C:/Users/Admin/.m2/repository/org/hdrhistogram/HdrHistogram/2.2.2/HdrHistogram-2.2.2.jar" />
+  </library>
+  <library name="Maven: io.micrometer:micrometer-core:1.14.2">
+    <archive path="C:/Users/Admin/.m2/repository/io/micrometer/micrometer-core/1.14.2/micrometer-core-1.14.2.jar" />
   </library>
   <library name="Maven: org.springframework.boot:spring-boot-actuator-autoconfigure:3.4.1">
     <archive path="C:/Users/Admin/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.4.1/spring-boot-actuator-autoconfigure-3.4.1.jar" />
@@ -236,6 +236,7 @@
     <archive path="C:/Users/Admin/AppData/Roaming/JetBrains/IntelliJIdea2024.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.3.3_dist_js_bootstrap.bundle.js" />
   </library>
   <library name="font-awesome">
+    <archive path="C:/Users/Admin/AppData/Roaming/JetBrains/IntelliJIdea2024.3/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_4.7.0_css_font-awesome.css" />
     <archive path="C:/Users/Admin/AppData/Roaming/JetBrains/IntelliJIdea2024.3/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_font-awesome_6.0.0-beta3_css_all.css" />
   </library>
 </eclipse-userlibraries>
