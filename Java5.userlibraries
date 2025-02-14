@@ -246,6 +246,21 @@
   <library name="Maven: org.hibernate.validator:hibernate-validator:8.0.2.Final">
     <archive path="C:/Users/hthuy/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar" />
   </library>
+  <library name="Maven: jakarta.validation:jakarta.validation-api:3.0.2">
+    <archive path="C:/Users/Admin/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar" />
+  </library>
+  <library name="Maven: com.fasterxml:classmate:1.7.0">
+    <archive path="C:/Users/Admin/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar" />
+  </library>
+  <library name="Maven: org.springframework.boot:spring-boot-starter-validation:3.4.1">
+    <archive path="C:/Users/Admin/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.4.1/spring-boot-starter-validation-3.4.1.jar" />
+  </library>
+  <library name="Maven: org.jboss.logging:jboss-logging:3.6.1.Final">
+    <archive path="C:/Users/Admin/.m2/repository/org/jboss/logging/jboss-logging/3.6.1.Final/jboss-logging-3.6.1.Final.jar" />
+  </library>
+  <library name="Maven: org.hibernate.validator:hibernate-validator:8.0.2.Final">
+    <archive path="C:/Users/Admin/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.2.Final/hibernate-validator-8.0.2.Final.jar" />
+  </library>
   <library name="bootstrap">
     <archive path="C:/Users/hthuy/AppData/Roaming/JetBrains/IntelliJIdea2024.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.3.3_dist_css_bootstrap.css" />
     <archive path="C:/Users/hthuy/AppData/Roaming/JetBrains/IntelliJIdea2024.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.3.3_dist_js_bootstrap.bundle.js" />
