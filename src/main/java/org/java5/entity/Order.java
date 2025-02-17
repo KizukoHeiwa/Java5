@@ -29,14 +29,14 @@ public class Order {
     private String address;
 
     @ColumnDefault("getdate()")
-    @Column(name = "Createdate")
-    private LocalDate createdate;
+    @Column(name = "create_date")
+    private LocalDate createDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Username")
+    @JoinColumn(name = "username")
     private Account username;
 
-    @OneToMany(mappedBy = "orderid")
+    @OneToMany(mappedBy = "order")
     private Set<OrderDetail> orderDetails = new LinkedHashSet<>();
 
 }

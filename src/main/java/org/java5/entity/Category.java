@@ -26,7 +26,7 @@ public class Category {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @OneToMany(mappedBy = "categoryid")
+    @OneToMany(mappedBy = "category")
     private Set<org.java5.entity.Product> products = new LinkedHashSet<>();
 
 }

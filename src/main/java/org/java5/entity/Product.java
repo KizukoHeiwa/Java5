@@ -38,17 +38,17 @@ public class Product {
     private Double price;
 
     @ColumnDefault("getdate()")
-    @Column(name = "Createdate")
-    private LocalDate createdate;
+    @Column(name = "create_date")
+    private LocalDate createDate;
 
     @Column(name = "available")
     private Boolean available;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Categoryid")
-    private Category categoryid;
+    @JoinColumn(name = "category_id")
+    private Category category;
 
-    @OneToMany(mappedBy = "productid")
+    @OneToMany(mappedBy = "product")
     private Set<OrderDetail> orderDetails = new LinkedHashSet<>();
 
 }

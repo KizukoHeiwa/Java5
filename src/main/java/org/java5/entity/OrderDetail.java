@@ -24,11 +24,11 @@ public class OrderDetail {
     private Integer quantity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Productid")
-    private org.java5.entity.Product productid;
+    @JoinColumn(name = "product_id")
+    private org.java5.entity.Product product;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "Orderid")
-    private org.java5.entity.Order orderid;
+    @JoinColumn(name = "order_id")
+    private org.java5.entity.Order order;
 
 }
