@@ -1,6 +1,7 @@
 package org.java5.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
@@ -18,6 +19,7 @@ public class Category {
     @Id
     @Size(max = 255)
     @Column(name = "id", nullable = false)
+    @NotBlank(message = "Vui lòng nhập mã ID")
     private String id;
 
     @Size(max = 255)
