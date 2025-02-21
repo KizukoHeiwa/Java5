@@ -2,6 +2,7 @@ package org.java5.controller;
 
 import org.java5.dao.ProductDAO;
 import org.java5.entity.Product;
+import org.java5.service.SessionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -20,6 +21,9 @@ public class ProductController {
     @Autowired
     ProductDAO dao;
 
+    @Autowired
+    SessionService session;
+
     @RequestMapping("/product/sort")
     public String sort(Model model,
                        @RequestParam("field") Optional<String> field) {
@@ -37,6 +41,29 @@ public class ProductController {
         Page<Product> page = dao.findAll(pageable);
         model.addAttribute("page", page);
         return "product/page";
+    }
+
+    @RequestMapping("/product/search")
+    public String search(Model model,
+                         @RequestParam("min") Optional<Double> min,
+                         @RequestParam("max") Optional<Double> max) {
+        double minPrice = min.orElse(Double.MIN_VALUE);
+        double maxPrice = max.orElse(Double.MAX_VALUE);
+        List<Product> items = dao.findByPriceBetween(minPrice, maxPrice);
+        model.addAttribute("items", items);
+        return "product/search";
+    }
+
+    @RequestMapping("/product/search-and-page")
+    public String searchAndPage(Model model,
+                                @RequestParam("keywords") Optional<String> kw,
+                                @RequestParam("p") Optional<Integer> p) {
+        String kwords = kw.orElseGet(() -> session.get("keywords"));
+        session.set("keywords", kwords);
+        Pageable pageable = PageRequest.of(p.orElse(0), 5);
+        Page<Product> page = dao.findAllByNameLike("%"+kwords+"%", pageable);
+        model.addAttribute("page", page);
+        return "product/search-and-page";
     }
 
 

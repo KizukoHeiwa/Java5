@@ -32,7 +32,7 @@ public class Order {
     @Column(name = "create_date")
     private LocalDate createDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "username")
     private Account username;
 
