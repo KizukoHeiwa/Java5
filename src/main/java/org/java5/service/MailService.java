@@ -15,14 +15,18 @@ public interface MailService{
     }
 
     void send(Mail mail);
-    default void send(String to, String subject, String body) {
-        Mail mail = Mail.builder().to(to).subject(subject).body(body).build();
+    default void send(String from, String to, String cc, String bcc, String subject, String body, String filenames){
+//        Mail mail = Mail.builder().to(to).subject(subject).body(body).build();
+        Mail mail = Mail.builder().from(from).to(to).cc(cc).bcc(bcc).subject(subject).body(body).filenames(filenames).build();
         this.send(mail);
     }
 
+
     void push(Mail mail);
-    default void push(String to, String subject, String body){
-        this.push(Mail.builder().to(to).subject(subject).body(body).build());
+    default void push(String from, String to, String cc, String bcc, String subject, String body, String filenames){
+//        this.push(Mail.builder().to(to).subject(subject).body(body).build());
+        Mail mail = Mail.builder().from(from).to(to).cc(cc).bcc(bcc).subject(subject).body(body).filenames(filenames).build();
+        this.push(mail);
     }
 
 }

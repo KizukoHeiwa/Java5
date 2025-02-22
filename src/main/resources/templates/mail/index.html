@@ -9,38 +9,38 @@
 </head>
 <body class="container my-5">
 <h2 class="text-center">Send Email</h2>
-<form action="/send-email" method="post" enctype="multipart/form-data" class="border p-4 rounded shadow">
+<form method="post" enctype="multipart/form-data" class="border p-4 rounded shadow">
     <div class="mb-3">
         <label class="form-label">From:</label>
-        <input type="email" name="from" class="form-control" required>
+        <input type="email" id="from" name="from" class="form-control" required>
     </div>
     <div class="mb-3">
         <label class="form-label">To:</label>
-        <input type="email" name="to" class="form-control" required>
+        <input type="email" id="to" name="to" class="form-control" required>
     </div>
     <div class="mb-3">
         <label class="form-label">CC:</label>
-        <input type="email" name="cc" class="form-control">
+        <input type="email" id="cc" name="cc" class="form-control">
     </div>
     <div class="mb-3">
         <label class="form-label">BCC:</label>
-        <input type="email" name="bcc" class="form-control">
+        <input type="email" id="bcc" name="bcc" class="form-control">
     </div>
     <div class="mb-3">
         <label class="form-label">Subject:</label>
-        <input type="text" name="subject" class="form-control" required>
+        <input type="text" id="subject" name="subject" class="form-control" required>
     </div>
     <div class="mb-3">
         <label class="form-label">Body:</label>
-        <textarea name="body" class="form-control" rows="5" required></textarea>
+        <textarea name="body" id="body" class="form-control" rows="5" required></textarea>
     </div>
     <div class="mb-3">
         <label class="form-label">Attachments:</label>
-        <input type="file" name="attachments" class="form-control" multiple>
+        <input type="file" id="filenames" name="filenames" class="form-control" multiple>
     </div>
     <div class="text-center">
-        <button type="submit" name="action" value="send" class="btn btn-primary">Send Now</button>
-        <button type="submit" name="action" value="queue" class="btn btn-secondary">Queue Email</button>
+        <button type="submit" formaction="/mail/send" class="btn btn-primary">Send Now</button>
+        <button type="submit" formaction="/mail/queue" class="btn btn-secondary">Queue Email</button>
     </div>
 </form>
 </body>
