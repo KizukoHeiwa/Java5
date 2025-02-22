@@ -6,8 +6,8 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,11 +38,11 @@ public class MailServiceImpl implements MailService {
             helper.setSubject(mail.getSubject());
             helper.setText(mail.getBody(), true);
             // 2.4. Đính kèm file
-            String filenames = mail.getFilenames();
-            if (!this.isNullOrEmpty(filenames)) {
-                for (String filename : filenames.split("[,;]+")) {
-                    File file = new File(filename.trim());
-                    helper.addAttachment(file.getName(), file);
+            if (mail.getFilenames() != null) {
+                for (MultipartFile file : mail.getFilenames()) {
+                    if (file.getSize() > 0) {
+                        helper.addAttachment(file.getOriginalFilename(), file);
+                    }
                 }
             }
 
