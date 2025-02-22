@@ -1,6 +1,7 @@
 package org.java5.controller;
 
 import jakarta.servlet.http.HttpSession;
+import org.java5.entities.Account;
 import org.java5.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AuthController {
-//    @Autowired
-//    AccountService accountService;
+    @Autowired
+    AccountService accountService;
     @Autowired
     HttpSession session;
 
@@ -25,15 +26,15 @@ public class AuthController {
     public String loginProcess(Model model,
                                @RequestParam("username") String username,
                                @RequestParam("password") String password) {
-//        Account user = accountService.findById(username);
-//        if(user == null) {
-//            model.addAttribute("message", "Invalid email!");
-//        } else if(!user.getPassword().equals(password)) {
-//            model.addAttribute("message", "Invalid password!");
-//        } else{
-//            session.setAttribute("user", user);
-//            model.addAttribute("message", "Login successfully!");
-//        }
+        Account user = accountService.findById(username);
+        if(user == null) {
+            model.addAttribute("message", "Invalid email!");
+        } else if(!user.getPassword().equals(password)) {
+            model.addAttribute("message", "Invalid password!");
+        } else{
+            session.setAttribute("user", user);
+            model.addAttribute("message", "Login successfully!");
+        }
 
         return "/auth/login";
     }

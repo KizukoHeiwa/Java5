@@ -1,4 +1,8 @@
 package org.java5.service;
 
-public class AccountService {
+import org.java5.entities.Account;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AccountService extends JpaRepository<Account, String> {
+    public Account findById(String username);
 }
