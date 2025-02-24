@@ -11,7 +11,8 @@
 
 <div class="card shadow p-4" style="width: 400px;">
     <h2 class="text-center mb-4">Login</h2>
-    <form action="/account/login" method="post">
+    <i class="text-danger" th:text="${message}"></i>
+    <form action="/auth/login" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Username</label>
             <input type="text" id="username" name="username" class="form-control" required>

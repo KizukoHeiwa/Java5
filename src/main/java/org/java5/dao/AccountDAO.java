@@ -1,8 +1,7 @@
-package org.java5.service;
+package org.java5.dao;
 
 import org.java5.entities.Account;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AccountService {
-    Account findById(String username);
+public interface AccountDAO extends JpaRepository<Account, String> {
 }

@@ -13,7 +13,7 @@ public class HomeController {
 
     @RequestMapping("/")
     public String index(Model model) {
-        model.addAttribute("username", sessionService.get("username"));
+        model.addAttribute("user", sessionService.get("user"));
         return "index";
     }
 }
